@@ -1,0 +1,66 @@
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image"
+import { useState, useEffect } from "react";
+import { Brightness6Rounded } from "@material-ui/icons";
+
+const Layout = ({ children, title = "Covid-19-Thailand" }) => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme")
+    );
+
+    setTheme(localStorage.getItem("theme"));
+  }, []);
+
+  const switchTheme = () => {
+    if (theme === "light") {
+      saveTheme("dark");
+    } else {
+      saveTheme("light");
+    }
+  };
+
+  const saveTheme = (theme) => {
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
+  return (
+    <div className="p-6 h-screen grid grid-rows-[auto_1fr_auto] max-w-screen-lg my-0 mx-auto font-Nunito font-semibold">
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet"/>
+      </Head>
+
+      <header className="flex justify-center items-center mb-8">
+        <Image src='/covid-19.svg' height='25' width="25" />
+        <div className="flex justify-center items-center mx-2 text-xl">
+          <p className="text-primary-color">Covid-19 </p>
+          <div className="flex ml-2 ">
+            Thailand
+          </div>
+        </div>
+        <button
+          className="border-none bg-transparent p-0 text-secondary flex justify-center items-center"
+          onClick={switchTheme}
+        >
+          <Brightness6Rounded />
+        </button>
+      </header>
+
+      <main className="">{children}</main>
+
+      <footer className="mt-8 text-secondary text-center">Covid-19-Thailand-App Made by Rockerkoonju</footer>
+    </div>
+  );
+};
+
+export default Layout;
