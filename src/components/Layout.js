@@ -35,18 +35,6 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <header className="flex justify-center items-center mb-8">
