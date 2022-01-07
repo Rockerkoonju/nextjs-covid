@@ -15,6 +15,7 @@ module.exports = {
     },
     fontFamily: {
       'Nunito': ['Nunito', "sans-serif"],
+      'Mitr': ['Mitr','sans-serif'],
     },
   },
   plugins: [],

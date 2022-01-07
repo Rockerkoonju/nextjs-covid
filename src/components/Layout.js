@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Brightness6Rounded } from "@material-ui/icons";
 
@@ -35,18 +35,25 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <header className="flex justify-center items-center mb-8">
-        <Image src='/covid-19.svg' height='25' width="25" />
+        <Image src="/covid-19.svg" height="25" width="25" />
         <div className="flex justify-center items-center mx-2 text-xl">
           <p className="text-primary-color">Covid-19 </p>
-          <div className="flex ml-2 ">
-            Thailand
-          </div>
+          <div className="flex ml-2 ">Thailand</div>
         </div>
         <button
           className="border-none bg-transparent p-0 text-secondary flex justify-center items-center"
@@ -58,7 +65,9 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
 
       <main className="">{children}</main>
 
-      <footer className="mt-8 text-secondary text-center">Covid-19-Thailand-App Made by Rockerkoonju</footer>
+      <footer className="mt-8 text-secondary text-center">
+        Covid-19-Thailand-App Made by Rockerkoonju
+      </footer>
     </div>
   );
 };

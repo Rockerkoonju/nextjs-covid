@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
 :root {
   --text-color: #124a63;
   --text-color-secondary: #b3c5cd;
