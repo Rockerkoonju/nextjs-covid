@@ -1,9 +1,9 @@
-import Link from "next/link";
+
 import {
   KeyboardArrowUpRounded,
   KeyboardArrowDownRounded,
 } from "@material-ui/icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const orderBy = (provinces, value, direction) => {
   if (direction === "asc") {
@@ -58,9 +58,7 @@ const ProvincesTable = ({ provinces }) => {
     setValue(value);
   };
 
-  useEffect(() => {
-      setValueAndDirection("province")
-  }, [])
+  
 
   return(
     <div>

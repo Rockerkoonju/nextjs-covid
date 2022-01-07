@@ -38,7 +38,7 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
       </Head>
 
       <header className="flex justify-center items-center mb-8">
-        <Image src="/covid-19.svg" height="25" width="25" />
+        <Image src="/covid-19.svg" alt="Covid-19-Thailand" height="25" width="25" />
         <div className="flex justify-center items-center mx-2 text-xl">
           <p className="text-primary-color">Covid-19 </p>
           <div className="flex ml-2 ">Thailand</div>
