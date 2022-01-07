@@ -16,7 +16,7 @@ export default function Home({provinces, country}) {
       province.province.toLowerCase().includes(keyword)
   );
 
-  console.log(provinces)
+  // console.log(provinces)
 
   const onInputChange = (e) => {
     e.preventDefault();
