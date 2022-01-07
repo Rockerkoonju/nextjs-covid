@@ -103,8 +103,8 @@ const ProvincesTable = ({ provinces }) => {
     </div>
 
     {orderedProvinces.map((province) => (
-      // <Link href={`/province/${province.province}`}>
-        <div key={province.province} className= "flex p-5 text-center bg-dark-bg rounded-lg mb-4 shadow-md transition hover:-translate-y-2 hover:shadow-lg">
+      <Link href={`/province/${province.province}`} key={province.province}>
+        <div className= "flex p-5 text-center bg-dark-bg rounded-lg mb-4 shadow-md transition hover:-translate-y-2 hover:shadow-lg">
           <div className= " font-Mitr flex-[4] justify-around md:text-left text-primary">{province.province}</div>
 
           <div className= " font-Mitr md:flex-[4] justify-around md:flex text-primary hidden">{province.new_case}</div>
@@ -113,7 +113,7 @@ const ProvincesTable = ({ provinces }) => {
 
           <div className= " font-Mitr md:flex-[4] justify-around md:flex text-primary hidden">{province.total_death}</div>
         </div>
-      // </Link>
+</Link>
     ))}
   </div>
   )
