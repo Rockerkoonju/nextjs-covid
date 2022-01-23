@@ -45,7 +45,7 @@ export default function Home({provinces, country}) {
   )
   }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces");
   const provinces = await res.json();
 
