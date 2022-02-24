@@ -45,11 +45,11 @@ const ProvincesTable = ({ provinces }) => {
 
   const switchDirection = () => {
     if (!direction) {
-      setDirection("asc");
-    } else if (direction === "asc") {
       setDirection("desc");
-    } else {
+    } else if (direction === "desc") {
       setDirection("asc");
+    } else {
+      setDirection(null);
     }
   };
 
