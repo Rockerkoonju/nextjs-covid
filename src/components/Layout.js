@@ -31,7 +31,7 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
   };
 
   return (
-    <div className="p-6 h-screen grid grid-rows-[auto_1fr_auto] max-w-screen-lg my-0 mx-auto font-Nunito font-semibold">
+    <div className="p-6 h-full grid grid-rows-[auto_1fr_auto] max-w-screen-lg my-0 mx-auto font-Nunito font-semibold">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -53,9 +53,9 @@ const Layout = ({ children, title = "Covid-19-Thailand" }) => {
 
       <main className="">{children}</main>
 
-      <footer className="mt-8 text-secondary text-center">
+      {/* <footer className="mt-8 text-secondary text-center bg-slate-800">
         Covid-19-Thailand-App Made by Rockerkoonju
-      </footer>
+      </footer> */}
     </div>
   );
 };
